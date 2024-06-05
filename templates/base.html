@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Mi aplicación random Flask{% endblock %}</title>
+    <link rel="stylesheet" href="{{url_for('static' , filename='styles.css')}}">
+</head>
+<body>
+    <header>
+        <h1>Mi Aplicación Flask</h1>
+        <img src="{{ url_for('static', filename='pokeball.jpg') }}" alt="Imagen"class="pokeball">
+        
+        <nav>
+            <ul>
+                <li><a href="/">Inicio</a></li>
+                <li><a href="/contacto">Contacto</a></li>
+                <li><a href="/saludo">saludo</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        {% block content %}
+
+        
+        {% endblock %}
+    </main>
+    <footer>
+        <p> Mi Aplicación randon de Flask</p>
+    </footer>
+</body>
+</html>
