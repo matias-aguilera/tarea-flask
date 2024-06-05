@@ -10,9 +10,15 @@
                         <th>
                                 nombre pkm
                         </th>
+                        <p> </p>
                         <th>
                                 types pkm
                         </th>
+                       <p> </p>
+                        <th>
+                                total stadisticas
+                        </th>
+                       
 
                 </tr>
                 {% for dato in datos.datos %}
@@ -23,6 +29,10 @@
                         <td>
                                 {{dato.types}}
                         </td>
+                        <td>
+                                {{dato.total}}
+                        </td>
+                        
                 </tr>
                 {% endfor %}
         </table>
